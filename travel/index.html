@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>大牟田 → 大阪 旅行予定（2泊）</title>
+  <style>
+    /* ===== Base ===== */
+    :root{
+      --bg: #f7f7fb;
+      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --rail:#16a34a;     /* JR/鉄道 */
+      --metro:#0ea5e9;    /* 地下鉄 */
+      --nishitetsu:#ef4444;/* 西鉄 */
+      --bus:#f59e0b;      /* バス */
+      --ship:#0891b2;     /* フェリー */
+      --shinkansen:#1d4ed8;/* 新幹線 */
+      --divider:#e5e7eb;
+      --chip:#eef2ff;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg, #f9fafb 0%, var(--bg) 100%);
+    }
+    .container{max-width:980px;margin:32px auto;padding:0 20px}
+
+    /* ===== Header ===== */
+    header{
+      position:sticky; top:0; z-index:10;
+      background:rgba(255,255,255,0.85); backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid var(--divider);
+    }
+    .hero{max-width:980px;margin:0 auto; padding:16px 20px; display:flex; gap:12px; align-items:center}
+    .hero .title{font-weight:800; letter-spacing:0.02em;}
+    .hero .meta{color:var(--muted); font-size:0.95rem}
+    .badge{display:inline-flex; gap:6px; align-items:center; padding:4px 10px; border-radius:999px; font-weight:600; background:var(--chip); color:var(--shinkansen)}
+
+    /* ===== Navigation (days) ===== */
+    .day-nav{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px}
+    .day-nav a{
+      text-decoration:none; color:var(--ink); border:1px solid var(--divider); padding:8px 12px; border-radius:10px; background:#fff;
+      transition: all .15s ease-in-out;
+    }
+    .day-nav a:hover{transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+
+    /* ===== Day Section ===== */
+    section.day{background:var(--card); border:1px solid var(--divider); border-radius:18px; padding:16px; margin:18px 0; box-shadow:0 8px 30px rgba(0,0,0,0.04)}
+    .day h2{margin:6px 0 2px 0; font-size:1.35rem}
+    .day .date{color:var(--muted); margin-bottom:10px}
+
+    /* ===== Timeline / Segments ===== */
+    .segment{margin-top:6px}
+    .segment h3{display:flex; align-items:center; gap:10px; font-size:1.05rem; margin:14px 0 8px}
+    .chip{font-size:0.85rem; font-weight:700; color:#fff; padding:6px 10px; border-radius:999px}
+    .chip.rail{background:var(--rail)}
+    .chip.metro{background:var(--metro)}
+    .chip.nishitetsu{background:var(--nishitetsu)}
+    .chip.bus{background:var(--bus)}
+    .chip.ship{background:var(--ship)}
+    .chip.shinkansen{background:var(--shinkansen)}
+
+    .timeline{position:relative; padding-left:26px}
+    .timeline::before{content:""; position:absolute; left:8px; top:6px; bottom:6px; width:2px; background:var(--divider)}
+    .item{position:relative; padding:10px 10px 10px 6px; border-radius:12px; display:grid; grid-template-columns:86px 1fr; gap:10px; align-items:center}
+    .item:not(:last-child){margin-bottom:4px}
+    /* .item::before{content:""; position:absolute; left:-10px; top:16px; width:10px; height:10px; background:#fff; border:2px solid var(--accent); border-radius:50%} */
+    .time{font-variant-numeric:tabular-nums; font-weight:700; color:var(--ink)}
+    .desc{color:var(--ink)}
+    .note{color:var(--muted); font-size:0.92rem}
+
+    /* ===== Utility ===== */
+    .split{height:1px; background:var(--divider); margin:18px 0}
+
+    /* ===== Footer ===== */
+    footer{color:var(--muted); text-align:center; padding:26px 0}
+
+    /* ===== Print ===== */
+    @media print{
+      header{position:static; backdrop-filter:none}
+      .day-nav{display:none}
+      body{background:#fff}
+      .container{max-width:1000px}
+      .chip{filter:none}
+      *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div>
+        <div class="title">福岡県大牟田 → 大阪 旅行予定（2泊）</div>
+        <div class="meta">1日目：9/16（月）— 3日目：9/18（水）</div>
+        <nav class="day-nav">
+          <a href="#day1">1日目</a>
+          <a href="#day2">2日目</a>
+          <a href="#day3">3日目</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========== Day 1 ========== -->
+    <section id="day1" class="day">
+      <h2>1日目：9月16日（月）</h2>
+      <div class="date">大牟田 → 新門司港 → フェリー泊</div>
+
+      <div class="segment">
+        <h3><span class="chip nishitetsu">西鉄 🚃</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">12:23</div><div class="desc">西鉄大牟田駅 <span class="note">発</span></div></div>
+          <div class="item"><div class="time">12:37</div><div class="desc">西鉄柳川駅 <span class="note">着</span></div></div>
+          <div class="item"><div class="time">13:26</div><div class="desc">西鉄福岡（天神）駅 <span class="note">着</span></div></div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <h3><span class="chip metro">地下鉄 🚇</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">13:35</div><div class="desc">天神駅 <span class="note">発</span></div></div>
+          <div class="item"><div class="time">13:41</div><div class="desc">博多駅 <span class="note">着</span></div></div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <h3><span class="chip rail">JR 🚃</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">14:20</div><div class="desc">博多駅 <span class="note">発</span></div></div>
+          <div class="item"><div class="time">15:07</div><div class="desc">小倉駅 <span class="note">着</span></div></div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <h3><span class="chip bus">バス 🚌</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">15:40</div><div class="desc">小倉駅 <span class="note">発</span></div></div>
+          <div class="item"><div class="time">16:20</div><div class="desc">新門司港 <span class="note">着</span></div></div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <h3><span class="chip ship">フェリー ⛴️</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">17:00</div><div class="desc">新門司港 <span class="note">出航</span></div></div>
+          <div class="item"><div class="time">翌 05:30</div><div class="desc">大阪南港 <span class="note">着</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Day 2 ========== -->
+    <section id="day2" class="day">
+      <h2>2日目：9月17日（火）</h2>
+      <div class="date">USJ 滞在</div>
+
+      <div class="segment">
+        <h3><span class="chip bus">バス 🚌</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">07:30</div><div class="desc">大阪南港 <span class="note">発</span></div></div>
+          <div class="item"><div class="time">08:00</div><div class="desc">ユニバーサルシティ駅前 <span class="note">着</span></div></div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <h3><span class="chip metro">ユニバーサルシティ 🧳</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">08:00</div><div class="desc">ホテルに荷物預け</div></div>
+          <div class="item"><div class="time">08:30</div><div class="desc">USJ入場</div></div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <h3><span class="chip rail">ユニバーサル・スタジオ・ジャパン 🎢</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">08:30</div><div class="desc">入園</div></div>
+          <div class="item"><div class="time">21:30</div><div class="desc">退園</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Day 3 ========== -->
+    <section id="day3" class="day">
+      <h2>3日目：9月18日（水）</h2>
+      <div class="date">大阪観光 → 新幹線で帰路</div>
+
+      <div class="segment">
+        <h3><span class="chip metro">観光・移動 🗺️</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">09:00</div><div class="desc">ホテル チェックアウト</div></div>
+          <div class="item"><div class="time">09:30</div><div class="desc">ユニバーサルシティ駅 → 西九条駅 → 大阪駅</div></div>
+          <div class="item"><div class="time">11:00–12:30</div><div class="desc">昼食「蛸之轍」（大阪駅構内）</div></div>
+          <div class="item"><div class="time">12:30</div><div class="desc">大阪駅 → 梅田駅（徒歩5分）</div></div>
+          <div class="item"><div class="time">12:40</div><div class="desc">梅田駅 → 池田駅（電車18〜25分）</div></div>
+          <div class="item"><div class="time">12:45</div><div class="desc">池田駅 → カップヌードルミュージアム（徒歩5分）</div></div>
+          <div class="item"><div class="time">14:30</div><div class="desc">カップヌードルミュージアム <span class="note">入館料1,000円</span></div></div>
+          <div class="item"><div class="time">15:10</div><div class="desc">カップヌードルファクトリー <span class="note">参加料500円・15:00集合必須</span></div></div>
+          <div class="item"><div class="time">16:20</div><div class="desc">体験終了</div></div>
+          <div class="item"><div class="time">17:00</div><div class="desc">夕食（新大阪）</div></div>
+          <div class="item"><div class="time">18:00</div><div class="desc">お土産・買い物（新大阪）</div></div>
+        </div>
+      </div>
+
+      <div class="split"></div>
+
+      <div class="segment">
+        <h3><span class="chip shinkansen">新幹線（のぞみ55号） 🚄</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">20:02</div><div class="desc">新大阪駅 <span class="note">発</span></div></div>
+          <div class="item"><div class="time">22:30</div><div class="desc">博多駅 <span class="note">着</span></div></div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <h3><span class="chip rail">JR 🚃</span></h3>
+        <div class="timeline">
+          <div class="item"><div class="time">22:54</div><div class="desc">博多駅 <span class="note">発</span></div></div>
+          <div class="item"><div class="time">00:17</div><div class="desc">大牟田駅 <span class="note">着</span></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    印刷はブラウザの印刷機能をご利用ください（色付きで最適化）。
+  </footer>
+</body>
+</html>
