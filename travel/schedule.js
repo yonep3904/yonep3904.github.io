@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 日付ごとの基準日
   const dayMap = {
-    day1: '2025-08-16',
+    day1: '2025-09-16',
     day2: '2025-09-17',
     day3: '2025-09-18',
   };
