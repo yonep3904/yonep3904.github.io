@@ -14,6 +14,31 @@
   --divider:#e5e7eb;
   --chip:#eef2ff;
 }
+/* ===== Past & Future Highlight ===== */
+.item.past {
+  opacity: 0.5;
+  background: #e5e7eb;
+}
+.item.future {
+  font-weight: bold;
+  /* background: #e5fdfbff; */
+}
+/* ===== Base ===== */
+:root{
+  --bg: #f7f7fb;
+  --card:#ffffff;
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --rail:#16a34a;     /* JR/鉄道 */
+  --metro:#0ea5e9;    /* 地下鉄 */
+  --nishitetsu:#ef4444;/* 西鉄 */
+  --bus:#f59e0b;      /* バス */
+  --ship:#0891b2;     /* フェリー */
+  --shinkansen:#1d4ed8;/* 新幹線 */
+  --divider:#e5e7eb;
+  --chip:#eef2ff;
+}
 html,body{height:100%}
 body{
   margin:0;
